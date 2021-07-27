@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Store setting detail</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+</head>
+<body>
+    <nav class="nav-menu bg-white">
+        <ul>
+            <li><a href="" title="" class="logo"><img src="./images/logo.png" alt=""></a></li>
+            <li><a href="" title="" class="item-menu active"><img src="./images/i1.png" alt=""><span>店舗一覧</span></a></li>
+            <li><a href="" title="" class="item-menu"><img src="./images/i2.png" alt=""><span>ログアウト</span></a></li>
+        </ul>
+    </nav>
+    <div class="wrap-main">
+        <div class="wrap-main-content">
+            <section id="reservation" class="bg-white">
+                <div class="wrap-detail padding-detail">
+                    <div class="button-title">
+                        <a href="" title="" class="button-edit">変更</a>
+                    </div>
+                    <h4>店舗情報</h4>
+                    <p>ID :<span> xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>メールアドレス  : <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>店舗名  : <span> xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>郵便番号 :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>都道府県  :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>市区町村 :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>市区町村以下 :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>電話番号 :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>ウェブサイトURL :  <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <h4>店舗画像</h4>
+                    <div class="img-detail">
+                        <img src="./images/img-detail.png" alt="">
+                    </div>
+                    <h4>ロゴ画像</h4>
+                    <div class="img-detail-small">
+                        <img src="./images/img-detail-small.png" alt="">
+                    </div>
+                    <p>公開終了日 : <span>xxxx/xx/xx</span></p>
+                    <p>カレンダー表示 : <span>する</span></p>
+                    <p>カレンダーデフォルト表示設定 : <span>当月</span></p>
+                    <p>CV タグ１: <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <p>CV タグ2 : <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                </div>
+            </section>
+            <a href="" title="" class="btn btn-border-gray close" ><img src="./images/close.png" alt="">戻る</a>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <p>予約を取り消しますか</p>
+            <div class="group-button">
+                <a href="" title="" class="btn btn-gray">戻る</a>
+                <button class="btn btn-red" data-toggle="modal" data-target="#success">作成する</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <p>予約を取り消しました</p>
+            <div class="group-button">
+                <button class="btn btn-red">OK</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

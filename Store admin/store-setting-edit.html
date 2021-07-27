@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>	Store Setting Edit </title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+<link rel="stylesheet" href="./css/jquery-ui.css">
+<link rel="stylesheet" href="./css/jquery.datetimepicker.css">
+</head>
+<body>
+    <header id="header">
+        <div class="wrap-header-edit bg-white">
+            <div class="container"><a href="" title="" class="logo"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container">
+            <div class="wrap-form-edit padding-edit bg-white">
+                <form action="" class="wrap-form">
+                    <h1>店舗設定変更</h1>
+                    <P>ID : <span>xxxxxxxxxxxxxxxxxxxx</span></P>
+                    <p>メールアドレス : <span>xxxxxxxxxxxxxxxxxxxx</span></p>
+                    <div class="form-group">
+                        <label for="">店舗名（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">郵便番号（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">都道府県（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">市区町村（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">市区町村以下（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">電話番号（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">ウェブサイトURL</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">店舗画像</label>
+                        <div class="form-group drop-file">
+                            <div class="active after drop-image">
+                                <div class="b-drop">
+                                    <img src="./images/img-avatar-edit.png" alt="">
+                                </div>
+                                <div class="fill"></div>
+                                <div class="preview"></div>
+                            </div>
+                            <div class="input-choose">   
+                                <input class="form-control file-upload" id="file" type="file" name="thumbnail_id_card" >
+                                <p>ファイル選択 <span class="select_file">choose file</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">ロゴ画像</label>
+                        <div class="form-group drop-file drop-avatar">
+                            <div class="active after drop-image">
+                                <div class="b-drop">
+                                    <img src="./images/img-avatar-edit2.png" alt="">
+                                </div>
+                                <div class="fill"></div>
+                                <div class="preview"></div>
+                            </div>
+                            <div class="input-choose">   
+                                <input class="form-control file-upload" id="file_2" type="file" name="thumbnail_id_card" >
+                                <p>ファイル選択 <span class="select_file">choose file</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">公開終了日</label>
+                        <input type="text" autocomplete="off" name="open_at" id="start_date" class="form-control time start_date" placeholder="xxxx/xx/xx">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">カレンダー表示</label>
+                        <select name="" id="" class="form-control">
+                            <option value="">する</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">カレンダーデフォルト表示設定</label>
+                        <select name="" id="" class="form-control">
+                            <option value="">当月</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">CV タグ１</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">CV タグ2</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="group-button">
+                        <a href="" title="" class="btn btn-gray">戻る</a>
+                        <button class="btn btn-red">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="./js/jsValidation.js"></script>
+<script>
+    let msg = '';
+    if(msg !== '') $("#modal-success").modal('show');
+    $.datetimepicker.setLocale('ja');
+    var dateToday = new Date();
+    $('.start_date').datetimepicker({
+        format:'Y/m/d',
+        minDate: dateToday,
+        onSelectDate:function(ct,$i){
+
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+
+        },
+        onSelectTime:function(ct,$i){
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+        }
+    });
+</script>
+</html>

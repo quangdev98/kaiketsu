@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>	Menu new</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+<link rel="stylesheet" href="./css/jquery-ui.css">
+<link rel="stylesheet" href="./css/jquery.datetimepicker.css">
+</head>
+<body>
+    <header id="header">
+        <div class="wrap-header-edit bg-white">
+            <div class="container"><a href="" title="" class="logo"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container">
+            <div class="wrap-form-edit padding-edit bg-white">
+                <form action="" class="wrap-form">
+                    <h1>メニュー新規追加</h1>
+                    <div class="form-group">
+                        <label for="">メニュー名（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニュー名（略称）（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニューカラー（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニューボタンカラー（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">料金（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">残り予約数表示（必須）</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-3 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" checked value="1" id="id43_true">
+                                <label class="custom-control-label" for="id43_true">
+                                    する
+                                </label>
+                            </div>
+                            <div class="form-check col-md-3 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" value="0" id="id43_false">
+                                <label class="custom-control-label" for="id43_false">
+                                    しない
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">所要時間（必須）</label>
+                        <div class="wrap-calender">
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>時間</span>
+                            </div>
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>分</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">所要時間表示（必須）</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-3 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" checked value="1" id="id43_true">
+                                <label class="custom-control-label" for="id43_true">
+                                    する
+                                </label>
+                            </div>
+                            <div class="form-check col-md-3 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" value="0" id="id43_false">
+                                <label class="custom-control-label" for="id43_false">
+                                    しない
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">重複禁止時間（必須）</label>
+                        <div class="wrap-calender">
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>時間</span>
+                            </div>
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>分</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">予約可能時間（必須）</label>
+                        <div class="wrap-calender work-time">
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>時</span>
+                                <input type="text" id="" class="form-control datepicker">
+                                <span class="icon-time">分 ~</span>
+                            </div>
+                            <div class="item-picker">
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>時</span>
+                                <input type="text" id="" class="form-control datepicker">
+                                <span>分</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニュー画像（必須）</label>
+                        <div class="form-group drop-file">
+                            <div class="active after drop-image">
+                                <div class="b-drop">
+                                    <img src="./images/img-avatar-edit.png" alt="">
+                                </div>
+                                <div class="fill"></div>
+                                <div class="preview"></div>
+                            </div>
+                            <div class="input-choose">   
+                                <input class="form-control file-upload" id="file" type="file" name="thumbnail_id_card" >
+                                <p>ファイル選択 <span class="select_file">choose file</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニュー概要（必須）</label>
+                        <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">公開終了日</label>
+                        <input type="text" autocomplete="off" name="open_at" id="start_date" class="form-control time start_date" placeholder="xxxx/xx/xx">
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">在籍開始年月日</label>
+                        <input type="text" autocomplete="off" name="open_at" id="start_date_2" class="form-control time start_date" placeholder="xxxx/xx/xx">
+                    </div>
+
+
+                    <h4>カスタマイズ入力</h4>
+                    <div class="input-auto" id="table-input-auto">
+                        <div class="box-item-input title">
+                            <div class="item-add"><p>項目名</p></div>
+                            <div class="item-even"><p>必須</p></div>
+                            <div class="item-add"><p>タイプ</p></div>
+                            <div class="item-add"><p>選択肢</p></div>
+                            <div class="item-add"><p></p></div>
+                        </div>
+                        <div class="box-item-input">
+                            <div class="item-add"><input type="text" placeholder="川島検査隊" value="川島検査隊" class="form-control"></div>
+                            <div class="item-even"><input type="checkbox"></div>
+                            <div class="item-add"><select name="" id="" class="form-control">
+                                <option value="">ラジオボタン</option>
+                            </select></div>
+                            <div class="item-add"><input type="text" placeholder="入団しない" value="入団しない" class="form-control"></div>
+                            <div class="item-add close-input-auto"><button type="button" class="btn">削除ボタン</button></div>
+                        </div>
+                        <div class="box-item-input">
+                            <div class="item-add"><input type="text" placeholder="チェックボックス" value="チェックボックス" class="form-control"></div>
+                            <div class="item-even"><input type="checkbox"></div>
+                            <div class="item-add"><select name="" id="" class="form-control">
+                                <option value="">チェックボックス</option>
+                            </select></div>
+                            <div class="item-add"><input type="text" placeholder="1,2" value="1,2" class="form-control"></div>
+                            <div class="item-add close-input-auto"><button type="button" class="btn">削除ボタン</button></div>
+                        </div>
+                        <div class="box-item-input">
+                            <div class="item-add"><input type="text" placeholder="奥田の料理プロ" value="奥田の料理プロ" class="form-control"></div>
+                            <div class="item-even"><input type="checkbox"></div>
+                            <div class="item-add"><select name="" id="" class="form-control">
+                                <option value="">配信希望,要らない</option>
+                            </select></div>
+                            <div class="item-add"><input type="text" placeholder="入団しない" value="入団しない" class="form-control"></div>
+                            <div class="item-add close-input-auto"><button type="button" class="btn">削除ボタン</button></div>
+                        </div>
+                        <div class="box-item-input">
+                            <div class="item-add"><input type="text" placeholder="鈴木のお菓子教室" value="鈴木のお菓子教室" class="form-control"></div>
+                            <div class="item-even"><input type="checkbox"></div>
+                            <div class="item-add"><select name="" id="" class="form-control">
+                                <option value="">配信希望,配信希望!!</option>
+                            </select></div>
+                            <div class="item-add"><input type="text" placeholder="入団しない" value="入団しない" class="form-control"></div>
+                            <div class="item-add close-input-auto"><button type="button" class="btn">削除ボタン</button></div>
+                        </div>
+                    </div>
+                    <div class="add-input-auto">
+                        <button type="button" class="btn btn-border-red" id="add-input">追加ボタン</button>
+                    </div>
+                    <div class="group-button">
+                        <a href="" title="" class="btn btn-gray">戻る</a>
+                        <button class="btn btn-red">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="./js/jsValidation.js"></script>
+<script>
+    $(function(){
+        $(".datepicker").datepicker();
+    });
+</script>
+<script>
+    let msg = '';
+    if(msg !== '') $("#modal-success").modal('show');
+    $.datetimepicker.setLocale('ja');
+    var dateToday = new Date();
+    $('.start_date').datetimepicker({
+        format:'Y/m/d',
+        minDate: dateToday,
+        onSelectDate:function(ct,$i){
+
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+
+        },
+        onSelectTime:function(ct,$i){
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+        }
+    });
+    $('.start_date_2').datetimepicker({
+        format:'Y/m/d',
+        minDate: dateToday,
+        onSelectDate:function(ct,$i){
+
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+
+        },
+        onSelectTime:function(ct,$i){
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+        }
+    });
+</script>
+</html>

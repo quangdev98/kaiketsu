@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "NotoSansJPRegular";
+  src: url('./fonts/NotoSansJP-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "NotoSansJPBold";
+  src: url("./fonts/NotoSansJP-Bold.otf") format('truetype');
+}
+*{font-family: "NotoSansJPRegular"}
+.cld-main a{
+  color: #333;
+  font-weight: bold;
+}
+.cld-labels .cld-label{color: #999; font-family: "NotoSansJPBold"}
+.cld-number, .cld-day.prevMonth .cld-number, .cld-day.nextMonth .cld-number{color: #6E6E6E;}
+.cld-days .currMonth{ margin: 15px 0;}
+.cld-days .today p, .cld-days li.first p{margin: 0;z-index: 99;}
+.cld-days .last{position: relative; background-color: white;}
+.cld-days li.first, .cld-days li.last{position: relative; background-color: white;}
+.cld-days li.first::after{content: ""; height: 100%; width: 62%; position: absolute; top: 0; right: 0; z-index: 1; border-top-left-radius: 20px; border-bottom-left-radius: 20px}
+.cld-days li.last::after{content: ""; height: 100%; width: 62%;  position: absolute; top: 0; left: 0; z-index: 1; border-top-right-radius: 20px; border-bottom-right-radius: 20px}
+.cld-day.nextMonth p,.cld-day.prevMonth p {color: #6e6e6e85 !important;}
+  .cld-datetime{
+    position: relative;
+    width: 66%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto auto 40px auto;
+    overflow: hidden;
+  }
+  .cld-datetime .today{
+    position: relative;
+    float: left;
+    width: calc(100% - 40px);
+    margin: auto;
+    text-align: center;
+  }
+  .cld-nav{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+  }
+  .cld-nav:hover{
+    cursor: pointer;
+  }
+  .cld-nav:hover svg{
+      fill: #666;
+  }
+  .cld-rwd{
+    float: left;
+  }
+  .cld-fwd{
+    float: right;
+  }
+.cld-labels{border-bottom: 1px solid #ccc; padding-bottom: 15px}
+
+  .cld-label, .cld-day{
+    display: inline-block;
+    width: 14.28%;
+    text-align: center;
+  }
+  .cld-days li.last p, .cld-days li.first p{
+    display: inline-block;
+    width: 40px;
+    border-radius: 50px;
+    /*background-color: #42B0FF;*/
+    /*color: #fff;*/
+    text-align: center;
+  }
+.cld-days li p.active{
+    background-color: #FC6D5E;
+    color: white;
+}
+.cld-days li.last p{ z-index: 9;  margin: 0;}
+
+.cld-days li p{border-radius: 50%}
+
+  .cld-day.disableDay{
+    opacity: 0.5;
+  }
+    .cld-number{
+      position: relative;
+      margin: 0 auto;
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      line-height: 30px;
+        font-size: 16px;
+    }
+.cld-days li.currMonth p:hover{
+    background-color: #634AEF;
+    color: white;
+}
+
+.cld-number:hover{cursor: pointer}
+      .cld-title{
+        position: absolute;
+        z-index: 5;
+        display: none;
+        top: 30px;
+        left: 0;
+        padding: 5px 10px;
+        background: #fff;
+        white-space: nowrap;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+      .cld-number:hover .cld-title{
+        display: block;
+      }
+      .cld-title::before{
+        content: '';
+        position: absolute;
+        top: -7.5px; left: 7.5px;
+        width: 0;
+        height: 0;
+        border-left: 7.5px solid transparent;
+        border-right: 7.5px solid transparent;
+
+        border-bottom: 7.5px solid #ccc;
+      }
+      .cld-number.eventday{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        border: 1px solid #999;
+      }
+      .cld-number.eventday:hover{
+        cursor: pointer;
+        background: #eee;
+      }
+      .today .cld-number.eventday:hover{
+        background: #888;
+      }
+
+@media (max-width: 1600px){
+    .cld-labels, .cld-days{padding: 0 10px}
+}

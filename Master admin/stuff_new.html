@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>	Stuff new</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+<link rel="stylesheet" href="./css/jquery-ui.css">
+<link rel="stylesheet" href="./css/jquery.datetimepicker.css">
+</head>
+<body>
+    <header id="header">
+        <div class="wrap-header-edit bg-white">
+            <div class="container"><a href="" title="" class="logo"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container">
+            <div class="wrap-form-edit padding-edit bg-white">
+                <form action="" class="wrap-form">
+                    <h1>基本情報</h1>
+                    <div class="form-group">
+                        <label for="">スタッフ名（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">店舗画像</label>
+                        <div class="form-group drop-file">
+                            <div class="active after drop-image">
+                                <div class="b-drop">
+                                    <img src="./images/img-avatar-edit.png" alt="">
+                                </div>
+                                <div class="fill"></div>
+                                <div class="preview"></div>
+                            </div>
+                            <div class="input-choose">   
+                                <input class="form-control file-upload" id="file" type="file" name="thumbnail_id_card" >
+                                <p>ファイル選択 <span class="select_file">choose file</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">自己紹介（必須）</label>
+                        <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">公開終了日</label>
+                        <input type="text" autocomplete="off" name="open_at" id="start_date" class="form-control time start_date" placeholder="xxxx/xx/xx">
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">在籍開始年月日</label>
+                        <input type="text" autocomplete="off" name="open_at" id="start_date_2" class="form-control time start_date" placeholder="xxxx/xx/xx">
+                    </div>
+                    <div class="form-group">
+                        <label for="">表示順（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">同時予約可能数（必須）</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">メール情報</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group ">
+                        <label for="">提供可能メニュー</label>
+                        <div class="scroll-responsive wrap-trader">
+                            <div class="item-time">メニューA<input name="time_work[2][]" value="0" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューB<input name="time_work[2][]" value="1" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューC<input name="time_work[2][]" value="2" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューD<input name="time_work[2][]" value="3" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューE<input name="time_work[2][]" value="4" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューF<input name="time_work[2][]" value="5" style="display: none" type="checkbox"></div>
+                            <div class="item-time">メニューG<input name="time_work[2][]" value="6" style="display: none" type="checkbox"></div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="">予約受付可能時間</label>
+                    </div>
+                    <ul class="nav nav-tabs" id="tab-change-day" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="monday" aria-selected="true">月曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#tuesday" role="tab" aria-controls="tuesday" aria-selected="false">火曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="wednesday-tab" data-toggle="tab" href="#wednesday" role="tab" aria-controls="wednesday" aria-selected="false">水曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="thursday-tab" data-toggle="tab" href="#thursday" role="tab" aria-controls="thursday" aria-selected="true">木曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="friday-tab" data-toggle="tab" href="#friday" role="tab" aria-controls="friday" aria-selected="false">金曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="saturday-tab" data-toggle="tab" href="#saturday" role="tab" aria-controls="saturday" aria-selected="false">土曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="sunday-tab" data-toggle="tab" href="#sunday" role="tab" aria-controls="sunday" aria-selected="false">日曜日</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="holiday-tab" data-toggle="tab" href="#holiday" role="tab" aria-controls="holiday" aria-selected="false">祝日</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[2][]" value="0" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[2][]" value="1" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[2][]" value="2" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active">02:30<input name="time_work[2][]" value="3" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active">03:00<input name="time_work[2][]" value="4" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[2][]" value="5" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[2][]" value="6" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[2][]" value="7" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[2][]" value="8" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active">05:30<input name="time_work[2][]" value="9" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[2][]" value="10" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[2][]" value="11" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[2][]" value="12" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[2][]" value="13" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[2][]" value="14" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[2][]" value="15" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[2][]" value="16" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[2][]" value="17" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[2][]" value="18" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[2][]" value="19" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[2][]" value="20" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[2][]" value="21" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[2][]" value="22" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[2][]" value="23" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[2][]" value="24" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[2][]" value="25" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[2][]" value="26" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[2][]" value="27" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[2][]" value="28" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[2][]" value="29" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[2][]" value="30" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[2][]" value="31" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[2][]" value="32" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[2][]" value="33" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[2][]" value="34" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[2][]" value="35" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[2][]" value="36" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[2][]" value="37" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[2][]" value="38" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[2][]" value="39" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[2][]" value="40" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[2][]" value="41" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[2][]" value="42" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[2][]" value="43" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[2][]" value="44" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[2][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[3][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="wednesday" role="tabpanel" aria-labelledby="wednesday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[4][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[5][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[6][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="saturday" role="tabpanel" aria-labelledby="saturday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[7][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[8][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="holiday" role="tabpanel" aria-labelledby="holiday-tab">
+                            <div class="table-select-time">
+                                <div class="scroll-responsive">
+                                    <div class="item-time">00:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[9][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time not-border"></div>
+                                    <div class="item-time not-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-button">
+                        <a href="" title="" class="btn btn-gray">戻る</a>
+                        <button class="btn btn-red">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="./js/jsValidation.js"></script>
+<script>
+    let msg = '';
+    if(msg !== '') $("#modal-success").modal('show');
+    $.datetimepicker.setLocale('ja');
+    var dateToday = new Date();
+    $('.start_date').datetimepicker({
+        format:'Y/m/d',
+        minDate: dateToday,
+        onSelectDate:function(ct,$i){
+
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+
+        },
+        onSelectTime:function(ct,$i){
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+        }
+    });
+    $('.start_date_2').datetimepicker({
+        format:'Y/m/d',
+        minDate: dateToday,
+        onSelectDate:function(ct,$i){
+
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+
+        },
+        onSelectTime:function(ct,$i){
+            if(!isNaN(new Date($('.end_date').val()).getTime())){
+                if(ct.getTime() >new Date($('.end_date').val()).getTime()){
+                    $('.end_date').val('');
+                }
+            }
+
+        }
+    });
+</script>
+</html>
