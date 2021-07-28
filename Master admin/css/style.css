@@ -24,7 +24,7 @@
 /* css default */
 *,body{font-size: 16px; font-family: var(--font-normal); line-height: 1; padding:0; margin:0; list-style: none; }
 body{background: var(--background-main);}
-img{ object-fit: cover;}
+img{ object-fit: cover; max-width: 100%;}
 .btn, .btn:focus,a, input, a:focus, input:focus, select, select:focus, textarea, textarea:focus{outline:none; box-shadow: none;}
 a{color:#FFFFFF}
 a:hover{text-decoration: none;}
@@ -40,7 +40,7 @@ p{color: #666666;}
 p>span{font-family: var(--font-bold);}
 .bg-white{background: #FFFFFF;}
 .font-bold{font-family: var(--font-bold);}
-.wrap-main{margin-bottom: 120px;}
+.wrap-main{margin-bottom: 120px; margin-left: 270px;}
 .color-black{color: #252525!important;}
 .btn{transition: all .4s;}
 .btn.btn-border-gray.close{width: auto; height: 40px;font-size: 16px;padding: 0 23px;float: left; color: #A5A5A5; margin-top: 30px; border-color: #E8E8E8; opacity: 1; font-weight: 400;}
@@ -48,9 +48,10 @@ p>span{font-family: var(--font-bold);}
 .btn.btn-border-red{border:1px solid #FC6D5E; color: #FC6D5E;}
 .btn.btn-border-red:hover{background: #FC6D5E; color: #FFFFFF;}
 .btn.btn-red:hover{background: #c14436;}
+.btn.btn-gray:hover{background: #848484;}
 .img-detail{ max-width: 679px; height: 350px; margin: 20px auto; }
 .img-detail-small{width: 147px; height: 147px; margin: 20px auto;}
-.img-detail-small img, .img-detail img{object-fit: cover;}
+.img-detail-small img, .img-detail img{object-fit: cover; height: 100%;}
 .button-title{margin-bottom: -39px;margin-top: -15px; position: relative; z-index: 1;}
 .button-title a.button-edit{ border:1px solid #A5A5A5; color: #252525; width: 157px; display: flex; align-items: center; justify-content: center; height: 43px; margin:0 auto; margin-right: 0; transition: .4s; border-radius: 3px;}
 .button-title a.button-edit:hover{background: #A5A5A5; color: #FFFFFF;}
@@ -91,7 +92,7 @@ form.wrap-form .drop-file.drop-avatar .drop-image{padding: 0; max-width: 147px; 
 .wrap-header-edit .logo{display: inline-block; padding:0 10px}
 
 /* login */
-.wrap-form-login{width: 495px; margin: 0 auto; margin-top: 65px;}
+.wrap-form-login{width: 100%;max-width: 495px; margin: 0 auto; margin-top: 65px;}
 #wrap-login{padding: 45px; border-radius: 5px;}
 #wrap-login h1{font-size: 25px; margin-bottom: 50px; text-align: center;}
 #wrap-login .wrap-form label{margin-bottom: 15px; color: #000000;}
@@ -117,7 +118,7 @@ form.wrap-form select {-webkit-appearance: none;color: #666666;-moz-appearance: 
 .wrap-form-edit{margin-top: 42px; padding-top: 30px; padding-bottom: 30px; margin-bottom: 100px;}
 .wrap-form-edit h1{font-size: 20px; margin-bottom: 30px; text-align: center;}
 .wrap-form-edit .group-button{padding-top: 35px; display: flex; justify-content: space-between; margin-bottom: 45px;}
-
+.wrap-form-edit .group-button .btn{margin:0 15px}
 /* MENU */
 nav.nav-menu{position: fixed;top: 0; left: 0; width: 270px; height: 100vh ; border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
 nav.nav-menu ul{display: block;}
@@ -130,6 +131,8 @@ nav.nav-menu ul li>a.item-menu:hover span{ font-family: var(--font-bold);}
 nav.nav-menu ul li>a.active{background: #FFF5F5;}
 nav.nav-menu ul li>a.active span{font-family: var(--font-bold);}
 
+/* menu mobile */
+.header-mobile{display: none}
 
 /* modal */
 .modal-dialog {max-width: 730px;}
@@ -187,6 +190,8 @@ section#reservation .group-button .btn{margin: 0 auto;}
 
 .input-auto .box-item-input{display: flex; align-items: center; width: 100%; margin-bottom: 20px;}
 .input-auto .item-add{width: 253px;} 
+.input-auto .item-add:last-child{width: auto;}
+.input-auto .item-add:last-child p{width: auto; margin:0}
 .input-auto .item-add.close-input-auto{width: auto;}
 .input-auto .item-even{width: 35px; margin-right: 40px;} 
 .input-auto .item-add input, .input-auto .item-add select{width:210px; margin-right: 43px; color: #707070;}
@@ -233,8 +238,8 @@ section#reservation.menu-detail{padding-bottom: 0;}
 .check-detail .custom-control-input:checked~.custom-control-label::before {border-color:#CCCCCC;width:20px;height: 20px;background-color: #fff;}
 .check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: -21px;}
 .check-detail .check-detail .col-md-3.padding-right{padding-right:25px; word-break: break-all;}
-
-
+.cld-labels, .cld-days {padding-bottom: 15px;}
+span.error-help-block{font-size: 70%; color: red}
 
 
 

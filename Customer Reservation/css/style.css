@@ -60,6 +60,7 @@ form.wrap-form .form-group input.time {background-image: url(../images/calender.
 .btn{height: 45px; border-radius: 3px; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 443px;}
 .btn.btn-red{background: var(--color-button); color: #FFFFFF;}
 .btn.btn-gray{background: #EAEAEA; color: #252525}
+.btn.btn-gray:hover{background: #848484;}
 .btn.btn-border-gray{border:1px solid #A5A5A5; color: #252525; max-width: 200px;}
 /* header */
 .wrap-header-edit{padding:16px 0}
