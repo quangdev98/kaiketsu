@@ -189,7 +189,8 @@ section#reservation .group-button .btn{margin: 0 auto;}
 .wrap-form-edit .col .form-group{margin-bottom: 22px;}
 
 .input-auto .box-item-input{display: flex; align-items: center; width: 100%; margin-bottom: 20px;}
-.input-auto .item-add{width: 253px;} 
+.input-auto .item-add{width: 253px; position: relative;} 
+.input-auto .item-add span.error-help-block{position: absolute; left: 0;} 
 .input-auto .item-add:last-child{width: auto;}
 .input-auto .item-add:last-child p{width: auto; margin:0}
 .input-auto .item-add.close-input-auto{width: auto;}
