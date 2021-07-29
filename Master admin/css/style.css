@@ -63,7 +63,7 @@ form.wrap-form .drop-file{ padding: 0; width: 100%; margin: 0 auto 70px auto; po
 form.wrap-form .drop-file.my-page{background: #E3F3FF; width:100%;max-width: 485px;}
 form.wrap-form .drop-file .invalid-feedback{position: absolute; bottom: 10px; left: 10px; z-index: 99999; background-color: transparent; padding: 0; color: red; border: none; text-decoration: none}
 form.wrap-form .drop-file .drop-image{font-size: 16px; text-align: center; max-width: 485px; background-color: #F2F2F2; padding: 102px 35px; margin:0 auto}
-form.wrap-form .drop-file .drop-image.active{color: white; position: relative; z-index: 99;}
+form.wrap-form .drop-file .drop-image.active{color: white; position: relative; z-index: 1;}
 form.wrap-form .drop-file .drop-image .b-drop{color: #333;  text-align: center; position: relative; z-index: 10;}
 form.wrap-form .drop-file.my-page .drop-image .b-drop, section .small-upload-image .drop-image .b-drop{font-size: 14px;position: relative;z-index: 2;}
 form.wrap-form .drop-file .drop-image img{margin-right: 15px;}
@@ -175,6 +175,7 @@ section#reservation .group-button .btn{margin: 0 auto;}
 /* reservation setting edit */
 .wrap-calender{display: flex; align-items: center;}
 .wrap-calender .item-picker{display: flex;align-items: center; position: relative;}
+.wrap-calender .item-picker div{position: relative; display: flex; align-items: center;}
 .wrap-calender .item-picker input{max-width: 210px;}
 .wrap-calender .item-picker span{margin:0 10px; display: inline-block; color: #666666;}
 .wrap-calender.work-time .item-picker input{max-width: 93px;}
