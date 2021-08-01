@@ -60,7 +60,7 @@
     .wrap-main {margin-top: 85px;}
     .button-title {margin-bottom: 15px;margin-top: 0;}
     .button-title a.button-edit {margin: 0 auto;}
-    .img-detail {max-height: 250px; height: auto;}
+    .img-detail {height: 250px;}
     .padding-edit {
         padding-left: 40px!important;
         padding-right: 40px!important;

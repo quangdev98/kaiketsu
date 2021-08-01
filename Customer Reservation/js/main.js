@@ -9,11 +9,7 @@ $(document).ready(function(){
     })
 
     // 
-    function setMargin(){
-        let widthMenu = $("nav.nav-menu").outerWidth();
-        $(".wrap-main").css({"margin-left": widthMenu + "px"});
-    }
-    setMargin();
+   
     // 
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -33,9 +29,15 @@ $(document).ready(function(){
       });
     // 
     $(window).resize(function () {
-        setMargin();
     });
-
+    // 
+    $(".icon-menu").click(function(){
+        $("nav.nav-menu").css({"transform": "translateX(0)"});
+    });
+    $(".nav-menu .icon-menu").click(function(){
+        $("nav.nav-menu").css({"transform": "translateX(-100%)"});
+    })
+    
     // 
     function deleteQuestion(){
         $('.close-input-auto').click(function(){

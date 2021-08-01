@@ -2,6 +2,11 @@
     --number-size: 65px;
     --number-size-table: -65px;
 }
+@media (max-width: 1600px){
+    .cld-labels, .cld-days {
+        padding-bottom: 15px;
+    }
+}
 @media (max-width: 1366px){
     .wrap-main .wrap-main-content { margin: 40px 70px 0;}
     .padding-detail {padding-left: var(--number-size)!important; padding-right: var(--number-size)!important;}
@@ -27,7 +32,7 @@
     .input-auto .item-add {width: 100%; max-width: 210px;}
     .input-auto .box-item-input {justify-content: space-between;}
     .input-auto .item-even input[type="checkbox"] {margin-left: 25px;}
-    .check-detail .custom-control-input:checked~.custom-control-label::after {left: -18px;}
+    .check-detail .custom-control-input:checked~.custom-control-label::after {left: -28px;}
 }
 @media (max-width: 1024px){
     .wrap-main{margin-left: 0!important; margin-top: 75px;}
@@ -60,7 +65,7 @@
     .wrap-main {margin-top: 85px;}
     .button-title {margin-bottom: 15px;margin-top: 0;}
     .button-title a.button-edit {margin: 0 auto;}
-    .img-detail {max-height: 250px; height: auto;}
+    .img-detail {height: 250px;}
     .padding-edit {
         padding-left: 40px!important;
         padding-right: 40px!important;
@@ -75,6 +80,8 @@
     .wrap-form-edit .form-check {margin-bottom: 15px;}
     .wrap-form-edit .row{display: block;}
     .wrap-house-detail .wrap-trader {grid-gap: 20px; grid-template-columns: auto auto auto auto;}
+    .list-social li a {margin: 0 25px;}
+    .list-social {margin: 30px 0 60px;}
 }
 @media (max-width: 576px){
     .box-table.scroll {overflow: scroll;}
@@ -96,11 +103,15 @@
     .wrap-main-content .title-table {display: flex; justify-content: space-between;}
     .wrap-main-content .title-table p {position: relative;}
     .wrap-main-content .title-table .btn-border-gray {left: auto;transform: none; max-width: 150px;}
+    .list-social li a {margin: 0 15px;}
+    .list-social {margin: 25px 0 50px;}
 }
 @media (max-width: 441px){
     #wrap-login {padding: 30px;}
     .input-auto .box-item-input {width: 180%;}
     .wrap-calender .item-picker input {max-width: 100px;}
+    .tab-content .table-select-time .scroll-responsive, .wrap-trader {grid-template-columns: auto auto auto;}
+    .list-social li a {margin: 0 7px;}
 }
 
 
