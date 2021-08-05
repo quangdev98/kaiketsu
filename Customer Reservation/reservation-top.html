@@ -347,6 +347,57 @@
     $('select[name="trainer_id"]').on('change', function(){
         window.location.href =  urlLesson+'?date_time='+date_time+'&trainer_id='+$(this).val();
     })
+
+
+$(".carousel-indicators li.active").nextAll().eq(0).toggleClass("show-small");
+$(".carousel").swipe({
+swipe: function(event, direction) {  
+event.preventDefault();
+$.ajax(this.href, {
+success: function() {
+function effect(){
+let list = $(".carousel-indicators li");
+let position = 0;
+for(let i =0; i < list.length; i++){
+if($(list[i]).hasClass('active')){
+position = i;
+break;
+}
+}
+let back = position - 1;
+let next = position + 1;
+//console.log( 'back: ' +back);
+//console.log('index:' + position);
+//console.log('next: ' + next);
+$(".carousel-indicators li.active").removeClass("show-small");
+$(".carousel-indicators li").removeClass('show-small');
+if(back >= 0 && next <= list.length){
+$(list[back]).addClass('show-small');
+$(list[next]).addClass('show-small'); 
+}
+if(back == -1) $(list).removeClass('show-small');
+}
+},
+error: function() {
+console.log("error");
+}
+});
+},
+allowPageScroll:"vertical"
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 

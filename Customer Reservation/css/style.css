@@ -192,14 +192,13 @@ ul#tab-change-day .nav-item.show .nav-link, .nav-tabs .nav-link.active{border-co
 ul#tab-change-day .nav-link:focus, section#wrap-create-trainer #tab-change-day .nav-link:hover{border: none;border-bottom: 1px solid #806AF8}
 
 .tab-content .table-select-time .scroll-responsive .item-time.non-active, .wrap-trader .item-time.non-active{background: #EEEEEE;}
-.check-detail .form-row{padding-left: 13px;}
 .check-detail .custom-control-label::before {border-color:#CCCCCC; width: 20px; height: 20px; top: 0;}
 .check-detail .custom-control-input:checked~.custom-control-label::before {border-color:#CCCCCC;width:20px;height: 20px;background-color: #fff;}
-.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: -31px;}
+.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: 1px;}
 
 .wrap-reservation-top .wrap-form label{line-height: 23px;}
-.wrap-reservation-top.wrap-form-edit .check-detail .form-check label{margin-left: 20px;}
-.wrap-reservation-top .check-detail .custom-control-label::before {margin-left: -10px;}
+.wrap-reservation-top.wrap-form-edit .check-detail .form-check label{margin-left: 0; padding-left: 33px;}
+.wrap-reservation-top .check-detail .custom-control-label::before {margin-left: 22px;}
 
 /*  */
 .wrap-check {display: block;position: relative;padding-left: 35px;margin-bottom: 0!important;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; color: #707070; }

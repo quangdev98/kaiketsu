@@ -183,7 +183,7 @@ section#reservation .group-button .btn{margin: 0 auto;}
 .wrap-form-edit .col label{color: #707070;}
 .wrap-form-edit .form-check{display: flex; align-items: center; min-height: 18px;}
 .wrap-form-edit .form-check input[type="checkbox"]{transform: scale(1.4); margin-top: 3px;}
-.wrap-form-edit .form-check label{margin-bottom: 0; margin-left: 10px;}
+.wrap-form-edit .form-check label{margin-bottom: 0; margin-left: 0; padding-left: 33px;}
 .wrap-form-edit .form-check>div{padding-right: 20px; min-width: 110px;}
 .wrap-form-edit .col h4{color: #666666; margin-bottom: 25px;}
 .wrap-form-edit .col .form-group{margin-bottom: 22px;}
@@ -234,10 +234,9 @@ section#reservation.menu-detail{padding-bottom: 0;}
 .menu-detail .box-table.scroll .table{margin-bottom: 0;}
 
 /* menu neew */
-.check-detail .form-row{padding-left: 13px;}
-.check-detail .custom-control-label::before {border-color:#CCCCCC; width: 20px; height: 20px; top: 0;}
+.check-detail .custom-control-label::before {border-color:#CCCCCC; width: 20px; height: 20px; top: 0; margin-left: 22px;}
 .check-detail .custom-control-input:checked~.custom-control-label::before {border-color:#CCCCCC;width:20px;height: 20px;background-color: #fff;}
-.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: -21px;}
+.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: 1px;}
 .check-detail .check-detail .col-md-3.padding-right{padding-right:25px; word-break: break-all;}
 .cld-labels, .cld-days {padding-bottom: 15px;}
 span.error-help-block{font-size: 70%; color: red!important;}
