@@ -8,10 +8,12 @@
     table.table thead tr th:last-child, table.table tr td:last-child{ padding-right: var(--number-size)!important;}
     table.table thead tr th:first-child, table.table tr td:first-child { padding-left: var(--number-size)!important;}
     .menu-detail .box-table.scroll {margin-left: var(--number-size-table);margin-right: var(--number-size-table);}
+    .wrap-date-detail .col-title-box p {padding-left: var(--number-size)}
     .padding-edit {
         padding-left: 110px!important;
         padding-right: 110px!important;
     }
+    .wrap-date-detail table.table thead tr th {padding-left: 0!important;}
     .wrap-menu {display: grid;grid-template-columns: auto auto auto;grid-gap: 25px;}
     .wrap-menu .item-box-menu {margin:0; width: 100%;}
 }
@@ -28,6 +30,12 @@
     .input-auto .box-item-input {justify-content: space-between;}
     .input-auto .item-even input[type="checkbox"] {margin-left: 25px;}
     .check-detail .custom-control-input:checked~.custom-control-label::after {left: 4px;}
+    .wrap-date-detail p ,.wrap-date-detail table.table tr td {height: 64px;}
+    .wrap-date-detail .col-title-box {max-width: 235px;}
+    .wrap-date-detail .hour-wrap {width: calc(100% - 235px);}
+    .wrap-button-reservation .wrap-button-right .btn:first-child {margin-right: 20px;}
+    .wrap-button-reservation .wrap-button-right .btn {width: 120px; font-size: 14px;}
+    .wrap-button-reservation .text-left p {font-size: 14px; margin-right: 15px;}
 }
 @media (max-width: 1024px){
     .wrap-main{margin-left: 0!important; margin-top: 75px;}
@@ -54,6 +62,12 @@
     .wrap-form-edit{margin-bottom: 40px;}
     .wrap-menu {grid-template-columns: auto auto }
     .wrap-menu .item-box-menu{max-width: none;}
+    .wrap-date-detail .col-title-box {max-width: 200px;}
+    .wrap-date-detail .hour-wrap {width: calc(100% - 200px);}
+    .wrap-date-detail .col-title-box p {padding-right: 20px;}
+    .wrap-button-reservation {flex-direction: column-reverse;}
+    .wrap-button-reservation .text-left {margin: 20px 0 10px;}
+    .wrap-date-reservation form.wrap-form {justify-content: center;}
 }
 @media (max-width: 768px){
     .wrap-main .wrap-main-content {margin: 0px 30px 0;}
@@ -75,6 +89,8 @@
     .wrap-form-edit .form-check {margin-bottom: 15px;}
     .wrap-form-edit .row{display: block;}
     .wrap-house-detail .wrap-trader {grid-gap: 20px; grid-template-columns: auto auto auto auto;}
+    .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 90px;}
+    .wrap-date-detail .menu-date {font-size: 13px;}
 }
 @media (max-width: 576px){
     .box-table.scroll {overflow: scroll;}
@@ -96,13 +112,27 @@
     .wrap-main-content .title-table {display: flex; justify-content: space-between;}
     .wrap-main-content .title-table p {position: relative;}
     .wrap-main-content .title-table .btn-border-gray {left: auto;transform: none; max-width: 150px;}
+    .wrap-date-reservation form.wrap-form {flex-direction: column;}
+    .wrap-date-reservation .get-date {margin: 0; margin-bottom: 20px;}
+    .wrap-date-reservation .get-date input {width: 130px;}    
+    .wrap-date-detail .col-title-box {max-width: 150px;}
+    .wrap-date-detail .hour-wrap {width: calc(100% - 150px);}
+    .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 80px;}
 }
 @media (max-width: 441px){
     #wrap-login {padding: 30px;}
     .input-auto .box-item-input {width: 180%;}
     .wrap-calender .item-picker input {max-width: 100px;}
+    .wrap-button-reservation .text-left p {font-size: 12px; margin-right: 10px;}
+    .wrap-button-reservation .text-left p:last-child{margin-right: 0;}
+    .wrap-button-reservation .text-left {display: flex; justify-content: center;}
+    .wrap-date-detail .col-title-box {max-width: 130px;}
+    .wrap-date-detail .hour-wrap {width: calc(100% - 130px);}
+    .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 70px;}
 }
-
+@media (max-width: 320px){
+    .wrap-main .wrap-main-content {margin: 0px 10px 0;}
+}
 
 
 
