@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Reservation top</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./css/Chart.min.css" >
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/tempusdominus-bootstrap-4.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrap-header-edit bg-white">
+            <div class="container"><a href="" title="" class="logo"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container">
+            <div class="wrap-reservation-top wrap-form-edit padding-edit bg-white">
+                <form action="" class="wrap-form">
+                    <h1>店舗情報</h1>
+                    <h2 class="title-datetime">予約</h2>
+                    <section id="calender-reservation" class="">
+                        <div id="caleandar"></div>
+                    </section>
+                    <div class="form-group">
+                        <label for="">スタッフ</label>
+                        <select name="" class="form-control" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">メニュー</label>
+                        <select name="" class="form-control" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">時間</label>
+                        <div class="scroll-responsive wrap-trader">
+                            <div class="item-time">00:00<input name="time_work[2][]" value="0" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">01:30<input name="time_work[2][]" value="1" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:00<input name="time_work[2][]" value="2" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">02:30<input name="time_work[2][]" value="3" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active">03:00<input name="time_work[2][]" value="4" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">03:30<input name="time_work[2][]" value="5" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:00<input name="time_work[2][]" value="6" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">04:30<input name="time_work[2][]" value="7" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">05:00<input name="time_work[2][]" value="8" style="display: none" type="checkbox"></div>
+                                    <div class="item-time non-active">05:30<input name="time_work[2][]" value="9" style="display: none" type="checkbox"></div>
+                                    <div class="item-time non-active">06:00<input name="time_work[2][]" value="10" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">06:30<input name="time_work[2][]" value="11" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:00<input name="time_work[2][]" value="12" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">07:30<input name="time_work[2][]" value="13" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active">08:00<input name="time_work[2][]" value="14" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">08:30<input name="time_work[2][]" value="15" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:00<input name="time_work[2][]" value="16" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">09:30<input name="time_work[2][]" value="17" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:00<input name="time_work[2][]" value="18" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">10:30<input name="time_work[2][]" value="19" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">11:00<input name="time_work[2][]" value="20" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active-gray">11:30<input name="time_work[2][]" value="21" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">12:00<input name="time_work[2][]" value="22" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active-gray">12:30<input name="time_work[2][]" value="23" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:00<input name="time_work[2][]" value="24" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">13:30<input name="time_work[2][]" value="25" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:00<input name="time_work[2][]" value="26" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">14:30<input name="time_work[2][]" value="27" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:00<input name="time_work[2][]" value="28" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">15:30<input name="time_work[2][]" value="29" style="display: none" type="checkbox"></div>
+                                    <div class="item-time non-active">16:00<input name="time_work[2][]" value="30" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">16:30<input name="time_work[2][]" value="31" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:00<input name="time_work[2][]" value="32" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">17:30<input name="time_work[2][]" value="33" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">18:00<input name="time_work[2][]" value="34" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active-gray">18:30<input name="time_work[2][]" value="35" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:00<input name="time_work[2][]" value="36" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">19:30<input name="time_work[2][]" value="37" style="display: none" type="checkbox"></div>
+                                    <div class="item-time active-gray">20:00<input name="time_work[2][]" value="38" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">20:30<input name="time_work[2][]" value="39" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:00<input name="time_work[2][]" value="40" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">21:30<input name="time_work[2][]" value="41" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:00<input name="time_work[2][]" value="42" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">22:30<input name="time_work[2][]" value="43" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:00<input name="time_work[2][]" value="44" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">23:30<input name="time_work[2][]" value="45" style="display: none" type="checkbox"></div>
+                                    <div class="item-time">24:00<input name="time_work[2][]" value="45" style="display: none" type="checkbox"></div>
+                        </div>
+                    </div>
+                    <h4>予約情報入力</h4>
+                    <div class="form-group">
+                        <label for="">お名前(漢字) (必須)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">お名前(カナ) (必須)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">メールアドレス</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">電話番号 (必須)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">電話番号</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">性別</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">携帯番号</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">住所</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <h4>カスタマイズ入力</h4>
+                    <div class="form-group check-detail">
+                        <label class="">川島検査隊 (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" checked value="1" id="id43_true">
+                                <label class="custom-control-label" for="id43_true">
+                                    入団しない
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[43]" value="0" id="id43_false">
+                                <label class="custom-control-label" for="id43_false">
+                                    入団する
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group wrap-choose">
+                        <label for="inputRelease">チェックボックス</label>
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                1
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1" checked="checked">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                2
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1" checked="checked">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                3
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                4
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">奥田の料理プロ (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[44]" checked value="1" id="id44_true">
+                                <label class="custom-control-label" for="id44_true">
+                                    配信希望 
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[44]" value="0" id="id44_false">
+                                <label class="custom-control-label" for="id44_false">
+                                    要らない
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">鈴木のお菓子教室 (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[45]" value="1" id="id45_true">
+                                <label class="custom-control-label" for="id45_true">
+                                    配信希望
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[45]" checked value="0" id="id45_false">
+                                <label class="custom-control-label" for="id45_false">
+                                    配信希望!!
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>メニューカスタマイズ入力</h4>
+                    <div class="form-group check-detail">
+                        <label class="">色は何にしますか？  (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[53]" checked value="1" id="id53_true">
+                                <label class="custom-control-label" for="id53_true">
+                                    入団しない
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[53]" value="0" id="id53_false">
+                                <label class="custom-control-label" for="id53_false">
+                                    入団する
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group wrap-choose">
+                        <label for="inputRelease">パーマをしますか？</label>
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                1
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1" checked="checked">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                2
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1" checked="checked">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                3
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="wrap-check">
+                                4
+                                <input class="form-check-in" type="checkbox" value="" id="defaultCheck1">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">メールアドレス  (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[54]" checked value="1" id="id54_true">
+                                <label class="custom-control-label" for="id54_true">
+                                    配信希望 
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[54]" value="0" id="id54_false">
+                                <label class="custom-control-label" for="id54_false">
+                                    要らない
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group check-detail">
+                        <label class="">電話番号 (必須)</label>
+                        <div class="form-row">
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[56]" value="1" id="id56_true">
+                                <label class="custom-control-label" for="id56_true">
+                                    配信希望
+
+                                </label>
+                            </div>
+                            <div class="form-check col-md-2 custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="select[56]" checked value="0" id="id56_false">
+                                <label class="custom-control-label" for="id56_false">
+                                    配信希望!!
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-button">
+                        <button type="submit" class="btn btn-red">追加する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/Chart.bundle.min.js"></script>
+<script src="./js/Chart.min.js"></script>
+<script src="./js/chartjs-plugin-datalabels.min.js"></script>
+<script src="./js/loader.js"></script>
+<script src="./js/bootstrap-datepicker.js"></script>
+<script src="./js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/date.js"></script>
+<script src="./js/caleandar.js"></script>
+    <script type="text/javascript">
+    var urlLesson = 'http://127.0.0.1:8000/admin/lesson/schedule';
+    var date_time  = '';
+    var events = [];
+    var settings = {
+        day: 12,
+        month: 04,
+        year: 2021,
+    };
+    var element = document.getElementById('caleandar');
+    caleandar(element, events, settings);
+    $('select[name="trainer_id"]').on('change', function(){
+        window.location.href =  urlLesson+'?date_time='+date_time+'&trainer_id='+$(this).val();
+    })
+
+
+$(".carousel-indicators li.active").nextAll().eq(0).toggleClass("show-small");
+$(".carousel").swipe({
+swipe: function(event, direction) {  
+event.preventDefault();
+$.ajax(this.href, {
+success: function() {
+function effect(){
+let list = $(".carousel-indicators li");
+let position = 0;
+for(let i =0; i < list.length; i++){
+if($(list[i]).hasClass('active')){
+position = i;
+break;
+}
+}
+let back = position - 1;
+let next = position + 1;
+//console.log( 'back: ' +back);
+//console.log('index:' + position);
+//console.log('next: ' + next);
+$(".carousel-indicators li.active").removeClass("show-small");
+$(".carousel-indicators li").removeClass('show-small');
+if(back >= 0 && next <= list.length){
+$(list[back]).addClass('show-small');
+$(list[next]).addClass('show-small'); 
+}
+if(back == -1) $(list).removeClass('show-small');
+}
+},
+error: function() {
+console.log("error");
+}
+});
+},
+allowPageScroll:"vertical"
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

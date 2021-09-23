@@ -286,6 +286,22 @@ span.error-help-block{font-size: 70%; color: red!important;}
 .wrap-calender .item-picker span.error-help-block{ position: absolute;top: 38px; left: 0; margin:0!important}
 .has-error{position: relative;}
 
+/*  */
+.wrap-check {display: block;position: relative;padding-left: 35px;margin-bottom: 0!important;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; color: #707070; }
+.wrap-check input {position:  absolute;opacity: 0;cursor: pointer;height: 0;width: 0;}
+.checkmark {position: absolute;top: 3px;left: 0;height: 18px;width: 18px;border-radius: 2px;background-color: #FFFFFF; border:1px solid #CCCCCC}
+.wrap-check:hover input ~ .checkmark {background-color: #FFFFFF;}
+.wrap-check input:checked ~ .checkmark {background-color: #FFFFFF;}
+.checkmark:after {content: "";position: absolute;display: none;}
+.wrap-check input:checked ~ .checkmark:after {display: block;}
+.wrap-check .checkmark:after {left: 5.5px;top: 0.5px;width: 5px;height: 10px;border: solid #FC6D5E;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+.wrap-choose .form-row{margin-left: 0;}
+.wrap-choose .form-row div[class*=col-]{padding-left: 0;}
+
+.title-datetime{font-size: 20px; text-align: center; margin: -10px 0 -5px}
+.wrap-trader .item-time{color: #666666;}
+.wrap-trader .item-time.active-gray{background-color: #EEEEEE; color: #666666;}
+
 
 
 
