@@ -192,13 +192,14 @@ ul#tab-change-day .nav-item.show .nav-link, .nav-tabs .nav-link.active{border-co
 ul#tab-change-day .nav-link:focus, section#wrap-create-trainer #tab-change-day .nav-link:hover{border: none;border-bottom: 1px solid #806AF8}
 
 .tab-content .table-select-time .scroll-responsive .item-time.non-active, .wrap-trader .item-time.non-active{background: #EEEEEE;}
+.check-detail .form-row{padding-left: 13px;}
 .check-detail .custom-control-label::before {border-color:#CCCCCC; width: 20px; height: 20px; top: 0;}
 .check-detail .custom-control-input:checked~.custom-control-label::before {border-color:#CCCCCC;width:20px;height: 20px;background-color: #fff;}
-.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: 1px;}
+.check-detail .custom-control-input:checked~.custom-control-label::after{background-color: #FC6D5E;border-radius: 50%;background-image: unset!important;width: 14px;height: 14px;top: 3px;left: -31px;}
 
 .wrap-reservation-top .wrap-form label{line-height: 23px;}
-.wrap-reservation-top.wrap-form-edit .check-detail .form-check label{margin-left: 0; padding-left: 33px;}
-.wrap-reservation-top .check-detail .custom-control-label::before {margin-left: 22px;}
+.wrap-reservation-top.wrap-form-edit .check-detail .form-check label{margin-left: 20px;}
+.wrap-reservation-top .check-detail .custom-control-label::before {margin-left: -10px;}
 
 /*  */
 .wrap-check {display: block;position: relative;padding-left: 35px;margin-bottom: 0!important;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; color: #707070; }
@@ -211,6 +212,7 @@ ul#tab-change-day .nav-link:focus, section#wrap-create-trainer #tab-change-day .
 .wrap-check .checkmark:after {left: 5.5px;top: 0.5px;width: 5px;height: 10px;border: solid #FC6D5E;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
 .wrap-choose .form-row{margin-left: 0;}
 .wrap-choose .form-row div[class*=col-]{padding-left: 0;}
+span.error-help-block{font-size: 70%; color: red!important;}
 
 
 

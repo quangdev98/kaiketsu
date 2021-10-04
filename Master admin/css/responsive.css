@@ -36,8 +36,6 @@
     .wrap-button-reservation .wrap-button-right .btn:first-child {margin-right: 20px;}
     .wrap-button-reservation .wrap-button-right .btn {width: 120px; font-size: 14px;}
     .wrap-button-reservation .text-left p {font-size: 14px; margin-right: 15px;}
-    .check-detail .custom-control-input:checked~.custom-control-label::after {left: 4px;}
-    .wrap-form-edit .form-check label{padding-left: 30px;}
 }
 @media (max-width: 1024px){
     .wrap-main{margin-left: 0!important; margin-top: 75px;}
@@ -62,8 +60,8 @@
     .input-auto .item-even {margin-right: 20px;}
     .input-auto .item-add { width: 100%;}
     .wrap-form-edit{margin-bottom: 40px;}
-    .wrap-menu {grid-template-columns: auto auto }
-    .wrap-menu .item-box-menu{max-width: none;}
+    .wrap-menu {display: flex; justify-content: space-between;}
+    .wrap-menu .item-box-menu{max-width: calc(50% - 15px);}
     .wrap-date-detail .col-title-box {max-width: 200px;}
     .wrap-date-detail .hour-wrap {width: calc(100% - 200px);}
     .wrap-date-detail .col-title-box p {padding-right: 20px;}
@@ -71,12 +69,18 @@
     .wrap-button-reservation .text-left {margin: 20px 0 10px;}
     .wrap-date-reservation form.wrap-form {justify-content: center;}
 }
+
+@media (max-width: 992px){
+    .input-auto .item-add {max-width: 150px;}
+    .input-auto .item-add p {width: 150px;}
+}
+
 @media (max-width: 768px){
     .wrap-main .wrap-main-content {margin: 0px 30px 0;}
     .wrap-main {margin-top: 85px;}
     .button-title {margin-bottom: 15px;margin-top: 0;}
     .button-title a.button-edit {margin: 0 auto;}
-    .img-detail {height: 250px;}
+    .img-detail img{ height: auto;}
     .padding-edit {
         padding-left: 40px!important;
         padding-right: 40px!important;
@@ -93,8 +97,11 @@
     .wrap-house-detail .wrap-trader {grid-gap: 20px; grid-template-columns: auto auto auto auto;}
     .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 90px;}
     .wrap-date-detail .menu-date {font-size: 13px;}
-    .wrap-form-edit h1 {font-size: 16px; margin-bottom: 15px;}
-    .title-datetime {font-size: 16px;margin-top: -5px;}
+    .input-auto .item-even input[type="checkbox"] {margin-left: 10px;}
+    .input-auto .item-even {margin-left: -20px;}
+}
+@media (max-width: 660px){
+.wrap-calender .item-picker select {width: 90px;}
 }
 @media (max-width: 576px){
     .box-table.scroll {overflow: scroll;}
@@ -122,7 +129,8 @@
     .wrap-date-detail .col-title-box {max-width: 150px;}
     .wrap-date-detail .hour-wrap {width: calc(100% - 150px);}
     .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 80px;}
-    .wrap-check {line-height: 23px;}
+    .img-detail img {margin-top: 0;}
+    .img-detail-small img{width: 120px; height: 120px; margin: 0px auto 20px;}
 }
 @media (max-width: 441px){
     #wrap-login {padding: 30px;}
@@ -134,9 +142,12 @@
     .wrap-date-detail .col-title-box {max-width: 130px;}
     .wrap-date-detail .hour-wrap {width: calc(100% - 130px);}
     .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 70px;}
+    .wrap-calender .item-picker select {width: 75px;}
+    form.wrap-form select {background-position-x: 90%;}
 }
 @media (max-width: 320px){
     .wrap-main .wrap-main-content {margin: 0px 10px 0;}
+    .wrap-calender .item-picker select {width: 65px;}
 }
 
 
