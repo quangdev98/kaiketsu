@@ -292,7 +292,11 @@ span.error-help-block{font-size: 70%; color: red!important;}
 .tab-content .table-select-time .scroll-responsive .item-time.non-active, .wrap-trader .item-time.non-active{background: #EEEEEE;}
 
 
-
+/* pagination */
+nav ul.pagination{ justify-content: center; margin-top: 20px;}
+nav ul.pagination li{}
+nav ul.pagination li a{width: 36px; height: 36px;background-color: transparent; transition: .4s; display: flex; margin: 0 5px; justify-content: center; align-items: center; border-radius: 100%; color: #666666;}
+nav ul.pagination li a:hover,nav ul.pagination li a.active{ background-color: var(--color-button); color: #fff;}
 
 
 

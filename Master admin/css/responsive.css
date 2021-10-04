@@ -144,6 +144,7 @@
     .wrap-date-detail table.table thead tr th, .wrap-date-detail table.table tr td {min-width: 70px;}
     .wrap-calender .item-picker select {width: 75px;}
     form.wrap-form select {background-position-x: 90%;}
+    nav ul.pagination li a{width: 32px; height: 32px;}
 }
 @media (max-width: 320px){
     .wrap-main .wrap-main-content {margin: 0px 10px 0;}
